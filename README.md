@@ -1,4 +1,4 @@
-# ZCTS_BROWSER
+# ZCTS_BROWSER: ABAP webDynPro
 ZCTS_BROWSER for Object Transporting
 Функции:
 1) перенос копий запросов без генерации версии
