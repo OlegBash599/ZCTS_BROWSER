@@ -9,6 +9,174 @@
    </INCLUDES>
    <FUNCTIONS>
     <item>
+     <FUNCNAME>Z_BC009_TMS_TP_IMPORT</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>TMS_TP_IMPORT via RFC</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_SYSTEM_NAME</PARAMETER>
+       <TYP>STPA-SYSNAME</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_REQUEST</PARAMETER>
+       <TYP>STPA-TRKORR</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EV_TP_CMD_STRG</PARAMETER>
+       <DBFIELD>STPA-CMDSTRING</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EV_TP_RET_CODE</PARAMETER>
+       <DBFIELD>STPA-RETCODE</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EV_TP_MESSAGE</PARAMETER>
+       <DBFIELD>STPA-MESSAGE</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EV_TP_VERSION</PARAMETER>
+       <DBFIELD>STPA-VERSION</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EV_TP_ALOG</PARAMETER>
+       <DBFIELD>STPA-FILE</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EV_TP_SLOG</PARAMETER>
+       <DBFIELD>STPA-FILE</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EV_TP_PID</PARAMETER>
+       <DBFIELD>STPA-PID</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EV_TPSTAT_KEY</PARAMETER>
+       <DBFIELD>STPA-TIMESTAMP</DBFIELD>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>TT_REQUEST</PARAMETER>
+       <DBSTRUCT>TPREQUEST</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>TT_PROJECT</PARAMETER>
+       <DBSTRUCT>TPPROJECT</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>TT_CLIENT</PARAMETER>
+       <DBSTRUCT>T000</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>TT_STDOUT</PARAMETER>
+       <DBSTRUCT>TPSTDOUT</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>TT_LOGPTR</PARAMETER>
+       <DBSTRUCT>TPLOGPTR</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_SYSTEM_NAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Имя SAP-системы (активной) конфигурации переноса</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_REQUEST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Запрос/Задача</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_TP_CMD_STRG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Текст длина 80</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_TP_RET_CODE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Код возврата</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_TP_MESSAGE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Текст сообщения</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_TP_VERSION</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Знаковое поле длиной 10</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_TP_ALOG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Файл, включая указание пути</STEXT>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_TP_SLOG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Файл, включая указание пути</STEXT>
+       <INDEX> 008</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_TP_PID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Идентификатор процесса</STEXT>
+       <INDEX> 009</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_TPSTAT_KEY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>tp метка времени</STEXT>
+       <INDEX> 010</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TT_REQUEST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>tp-запросы</STEXT>
+       <INDEX> 011</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TT_PROJECT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>tp-проекты</STEXT>
+       <INDEX> 012</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TT_CLIENT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Манданты</STEXT>
+       <INDEX> 013</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TT_STDOUT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>tp StdOut</STEXT>
+       <INDEX> 014</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TT_LOGPTR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>tp-кодыы возврата и указатель журнала</STEXT>
+       <INDEX> 015</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
      <FUNCNAME>Z_BC009_TRREQ_UPD</FUNCNAME>
      <UPDATE_TASK>1</UPDATE_TASK>
      <SHORT_TEXT>Transport Request (version avoid)</SHORT_TEXT>
