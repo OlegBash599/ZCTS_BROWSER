@@ -1,0 +1,648 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+    <LANGU>R</LANGU>
+    <DESCRIPT>Assistance Class for CTS_BROWSER</DESCRIPT>
+    <STATE>1</STATE>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>000</KEY>
+     <ENTRY>&amp; &amp; &amp; &amp;</ENTRY>
+     <LENGTH>7</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Запросы для системы</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>&lt;Запрос со статусом &amp;1 не найден&gt;</ENTRY>
+     <LENGTH>60</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>003</KEY>
+     <ENTRY>&lt;Без проекта&gt;</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>004</KEY>
+     <ENTRY>&lt;Неизвестно&gt;</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>005</KEY>
+     <ENTRY>Прикрепить файловый объект к запросу</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>006</KEY>
+     <ENTRY>Мандант</ENTRY>
+     <LENGTH>15</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>007</KEY>
+     <ENTRY>Сервер</ENTRY>
+     <LENGTH>15</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>008</KEY>
+     <ENTRY>Содержимое репозитария XI</ENTRY>
+     <LENGTH>35</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>009</KEY>
+     <ENTRY>Содержимое каталога XI</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>010</KEY>
+     <ENTRY>Имя файла</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>011</KEY>
+     <ENTRY>Выбрать файл</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>012</KEY>
+     <ENTRY>Выбрать запрос &amp;1</ENTRY>
+     <LENGTH>80</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>013</KEY>
+     <ENTRY>Можно изменить</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>014</KEY>
+     <ENTRY>Деблокировано</ENTRY>
+     <LENGTH>15</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>015</KEY>
+     <ENTRY>Прочее</ENTRY>
+     <LENGTH>10</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>016</KEY>
+     <ENTRY>Объекты не найдены</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>017</KEY>
+     <ENTRY>Действительно удалить файл &quot;&amp;1&quot; из списка объектов?</ENTRY>
+     <LENGTH>90</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>018</KEY>
+     <ENTRY>Удалить &amp;1?</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>019</KEY>
+     <ENTRY>Файл &amp;1 удален</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>020</KEY>
+     <ENTRY>Файл: &amp;1</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>021</KEY>
+     <ENTRY>Не найден журнал для системы &amp;1</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>022</KEY>
+     <ENTRY>Просмотр журнала &amp;1</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>023</KEY>
+     <ENTRY>Ввести описание</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>024</KEY>
+     <ENTRY>Ввод целевой системы</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>025</KEY>
+     <ENTRY>Запрос &amp;1 создал &amp;2</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>026</KEY>
+     <ENTRY>и определить как стандартный запрос</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>027</KEY>
+     <ENTRY>Ввести владельца запроса</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>028</KEY>
+     <ENTRY>Проект &amp;1 не существует</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>029</KEY>
+     <ENTRY>OK</ENTRY>
+     <LENGTH>10</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>030</KEY>
+     <ENTRY>Отменить</ENTRY>
+     <LENGTH>10</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>031</KEY>
+     <ENTRY> &lt;Не присвоено&gt;</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>032</KEY>
+     <ENTRY>Владелец &amp;1 неизвестен</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>033</KEY>
+     <ENTRY>Файл отсутствует или операционная система не может открыть файл &amp;1</ENTRY>
+     <LENGTH>80</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>034</KEY>
+     <ENTRY>Создать запрос на перенос</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>035</KEY>
+     <ENTRY>Удалить &amp;1 ?</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>036</KEY>
+     <ENTRY>Удаление запроса</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>037</KEY>
+     <ENTRY>СоВчерашДня</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>038</KEY>
+     <ENTRY>Последние 2 недели</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>039</KEY>
+     <ENTRY>Последние 4 недели</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>040</KEY>
+     <ENTRY>Последние 8 недель</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>041</KEY>
+     <ENTRY>Без ограничения</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>042</KEY>
+     <ENTRY>Изменить владельца запроса &amp;1</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>043</KEY>
+     <ENTRY>Изменить владельца</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>044</KEY>
+     <ENTRY>Показать ПодрИнф</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>045</KEY>
+     <ENTRY>Скрыть ПодрИнф</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>046</KEY>
+     <ENTRY>Атрибут &quot;SAP_CTS_PROJECT&quot; не может быть изменен</ENTRY>
+     <LENGTH>60</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>047</KEY>
+     <ENTRY>Атрибуты успешно изменены</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>048</KEY>
+     <ENTRY>Для значения &amp;1 отсутствует атрибут</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>049</KEY>
+     <ENTRY>Для атрибута &amp;1 отсутствует значение</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>050</KEY>
+     <ENTRY>Для числа строк разрешено значение от 0 до 200</ENTRY>
+     <LENGTH>80</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>051</KEY>
+     <ENTRY>Деблокирование запущено</ENTRY>
+     <LENGTH>60</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>052</KEY>
+     <ENTRY>Можно изменить</ENTRY>
+     <LENGTH>60</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>053</KEY>
+     <ENTRY>Изменяемо, защищено</ENTRY>
+     <LENGTH>60</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>054</KEY>
+     <ENTRY>Деблокировано</ENTRY>
+     <LENGTH>60</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>055</KEY>
+     <ENTRY>Деблокировано, защита от импорта для исправленных объектов</ENTRY>
+     <LENGTH>60</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>056</KEY>
+     <ENTRY>Предварительный выбор запроса</ENTRY>
+     <LENGTH>60</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>057</KEY>
+     <ENTRY>Ввести действительную целевую систему</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>058</KEY>
+     <ENTRY>Выбрать запрос</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>059</KEY>
+     <ENTRY>Добавить польз. к запросу</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>060</KEY>
+     <ENTRY>Запрос/задача &amp;1 не удалена (не явл. пустой или классиф.). Проверьте запрос/задачу и при необходимости деблокируйте ее вручную</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>061</KEY>
+     <ENTRY>Проблема полномочий в проекте</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>062</KEY>
+     <ENTRY>Ввод имени пользователя</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>063</KEY>
+     <ENTRY>Атрибут &amp;1 должен быть однозначным</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>064</KEY>
+     <ENTRY>Отсутствует обязательный атрибут &amp;1</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>065</KEY>
+     <ENTRY>Удалить файловый объект</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>066</KEY>
+     <ENTRY>Добавить</ENTRY>
+     <LENGTH>15</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>067</KEY>
+     <ENTRY>Добавить атрибуты к запросу</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>068</KEY>
+     <ENTRY>Однозначный атрибут &quot;&amp;1&quot; уже добавлен к запросу</ENTRY>
+     <LENGTH>55</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>069</KEY>
+     <ENTRY>Доступные атрибуты</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>070</KEY>
+     <ENTRY>Сохранить атрибуты запроса</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>071</KEY>
+     <ENTRY>Атрибуты без значений будут удалены из запроса</ENTRY>
+     <LENGTH>72</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>072</KEY>
+     <ENTRY>Значения параметров APPLICATION и PURPOSE отличаются; будет использовано значение параметра PURPOSE</ENTRY>
+     <LENGTH>130</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>073</KEY>
+     <ENTRY>Запрос, указанный в URL, не принадлежит к фактической системе. Изменение запроса невозможно</ENTRY>
+     <LENGTH>130</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>074</KEY>
+     <ENTRY>Сохранить</ENTRY>
+     <LENGTH>10</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>075</KEY>
+     <ENTRY>Введите владельца</ENTRY>
+     <LENGTH>80</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>076</KEY>
+     <ENTRY>Пользователь &apos;&amp;1&apos; не существует в системе (или заблокирован)</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+   </TPOOL>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CHECK_PROJECT_FOR_TRKORR</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>check if project is allowed for given request</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CON_CLIENT</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Radio button Client</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CON_FILE_OBJECT</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Object name in a transport request</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CON_OTHERS</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Radio button server file source</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CON_PARAMETER_CLIENT</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Parameter value for client</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CON_PARAMETER_CLIENT_ONLY</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Parameter value for client only</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CON_PARAMETER_SERVER</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Parameter value for server</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CON_PARAMETER_SERVER_ONLY</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Parameter value for server only</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CON_REQ_MODIFIABLE</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Selection criteria for modifiable Requests</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CON_REQ_RELEASED</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Selection criteria for released Requests</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CON_RQSTAT_MODIFIED</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Drop-Down value for status (Listbox)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CON_RQSTAT_RELEASED</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Drop-Down value for status (Listbox)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CON_SAP_CTS_PROJECT</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Attribute SAP_CTS_PROJECT</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CON_SERVER</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Radio button Server</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CON_TAB_ATTRIBUTES</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Selected Tab Attributes</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CON_TAB_OBJECTS</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Selected Tab Object List</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CON_TAB_PROPERTIES</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Selected Tab Properties</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CON_TAB_PROTOCOL_LIST</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Selected Tab Logs</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CON_TAB_TEAM</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Selected Tab Team</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CON_X</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Set = X</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CON_XI_DIRECTORY</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Radio-Button Index for XI_DIRECTORY</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>CON_XI_REPOSITORY</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Radio-Button Index for XI_REPOSITORY</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>GET_ALL_PROJECTS</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>get all projects from database</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>SELECT_ALL_APPLICATION_TYPES</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>select all appl types from cts_rq_applid and cts_rq_applidt</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>SELECT_FILE_ATTRIBUTE</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>select file attribute value from SI_RQ_FILECNTRL</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>SELECT_PHYSICAL_FILENAME</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>select physical filename from SI_RQ_FILECNTRL</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>SELECT_TRSTATUS</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>select trstatus from e070</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_ASSIST_BROWSER</CLSNAME>
+     <CMPNAME>UPDATE_SERVER_FILE</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Update server file (function Attach Object)</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
