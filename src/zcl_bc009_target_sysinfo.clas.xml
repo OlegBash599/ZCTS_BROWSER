@@ -8,7 +8,7 @@
     <DESCRIPT>Getting Target System Info</DESCRIPT>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
-    <FIXPT>X</FIXPT>
+    <FIXPT>X </FIXPT>
     <UNICODE>X</UNICODE>
    </VSEOCLASS>
   </asx:values>
