@@ -52,7 +52,10 @@ CLASS ZCL_BC009_TARGET_SYSINFO IMPLEMENTATION.
     ms_target_system_info-rfcdest = 'RFC2SYS'.
     ms_target_system_info-system = 'SYS'.
 
+
+" вынести в отдельный класс
     IF ms_target_system_info-rfcdest eq 'RFC2SYS'.
+    " if runtime error - you need to substitute errors
       " если этот дамп произошел - то нужно менять значения выше на корректные
       " если базис адекватный - то запросить у базиса
       MESSAGE x000(cl).
