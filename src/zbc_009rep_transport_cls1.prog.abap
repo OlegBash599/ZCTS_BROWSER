@@ -29,7 +29,7 @@ CLASS lcl_u DEFINITION.
 
 
     METHODS fill_e070
-      IMPORTING iv_mode TYPE char1 DEFAULT 'A' " A - normal, B - copy
+      IMPORTING iv_mode TYPE char1 DEFAULT 'A' " A - normal (not TOC), B - TOC (transport of copies)
       CHANGING ct_e070 TYPE e070_t.
 
     METHODS transport_via_tms
