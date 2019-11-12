@@ -2,7 +2,7 @@
 *& Report  ZBC_009REP_TRANSPORT_LIGHT
 *&
 *&---------------------------------------------------------------------*
-*&
+*& Light version of calling ZCTS browser to check customizing
 *&
 *&---------------------------------------------------------------------*
 
