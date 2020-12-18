@@ -49,10 +49,10 @@ CLASS ZCL_BC009_TARGET_SYSINFO IMPLEMENTATION.
 
     " эти значения нужно поменять на RFC-адрес в целевую (тестовую систему)
     " и на имя системы для переносов -
-    "ms_target_system_info-rfcdest = 'RFC2SYS'.
-    ms_target_system_info-rfcdest = 'NONE'.
-    "ms_target_system_info-system = 'SYS'.
-    ms_target_system_info-system = 'NPL'.
+    ms_target_system_info-rfcdest = 'RFC2SYS'.
+    "ms_target_system_info-rfcdest = 'NONE'.
+    ms_target_system_info-system = 'SYS'.
+    "ms_target_system_info-system = 'NPL'.
 
 
 " вынести в отдельный класс
