@@ -4,20 +4,12 @@
   <asx:values>
    <VSEOINTERF>
     <CLSNAME>ZIF_BC009_REQUEST</CLSNAME>
-    <LANGU>R</LANGU>
+    <LANGU>E</LANGU>
     <DESCRIPT>Transport Request(Custom)</DESCRIPT>
     <EXPOSURE>2</EXPOSURE>
     <STATE>1</STATE>
     <UNICODE>X</UNICODE>
    </VSEOINTERF>
-   <DESCRIPTIONS>
-    <SEOCOMPOTX>
-     <CLSNAME>ZIF_BC009_REQUEST</CLSNAME>
-     <CMPNAME>MC_N</CMPNAME>
-     <LANGU>R</LANGU>
-     <DESCRIPT>Имя типа объекта</DESCRIPT>
-    </SEOCOMPOTX>
-   </DESCRIPTIONS>
   </asx:values>
  </asx:abap>
 </abapGit>

@@ -43,8 +43,8 @@
     </item>
     <item>
      <ID>S</ID>
-     <KEY>S_UNAME</KEY>
-     <ENTRY>пользователь</ENTRY>
+     <KEY>VERS_IGN</KEY>
+     <ENTRY>ИгнрирВерсии</ENTRY>
      <LENGTH>20</LENGTH>
     </item>
    </TPOOL>

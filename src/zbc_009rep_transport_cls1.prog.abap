@@ -14,7 +14,7 @@ CLASS lcl_u DEFINITION.
     METHODS at_sel_scr
       IMPORTING
         iv_ucomm TYPE syucomm
-        is_scr TYPE ts_screen.
+        is_scr   TYPE ts_screen.
 
   PROTECTED SECTION.
   PRIVATE SECTION.
@@ -30,10 +30,10 @@ CLASS lcl_u DEFINITION.
 
     METHODS fill_e070
       IMPORTING iv_mode TYPE char1 DEFAULT 'A' " A - normal (not TOC), B - TOC (transport of copies)
-      CHANGING ct_e070 TYPE e070_t.
+      CHANGING  ct_e070 TYPE e070_t.
 
     METHODS transport_via_tms
-       IMPORTING is_e070 TYPE e070.
+      IMPORTING is_e070 TYPE e070.
 
 
     METHODS tms_in_local_sys
@@ -41,21 +41,21 @@ CLASS lcl_u DEFINITION.
 
 
     METHODS tms_in_remote_sys
-       IMPORTING is_e070 TYPE e070.
+      IMPORTING is_e070 TYPE e070.
 
     METHODS create_copy
       IMPORTING it_e070 TYPE e070_t.
 
     METHODS put_objects2request
-      IMPORTING it_e070 TYPE e070_t
+      IMPORTING it_e070   TYPE e070_t
                 iv_req_id TYPE trkorr.
 
 
     METHODS release_request
-      IMPORTING iv_req_id  TYPE trkorr.
+      IMPORTING iv_req_id TYPE trkorr.
 
     METHODS transport_request
-      IMPORTING iv_req_id  TYPE trkorr.
+      IMPORTING iv_req_id TYPE trkorr.
 
     METHODS fill_target_system_info.
 
@@ -151,7 +151,10 @@ CLASS lcl_u IMPLEMENTATION.
     IF no_dis EQ abap_true.
 
     ELSE.
-      zcl_bc009_html=>get_instance( )->show( ).
+      IF sy-calld EQ abap_true and sy-MODNO is INITIAL.
+      ELSE.
+        zcl_bc009_html=>get_instance( )->show( ).
+      ENDIF.
     ENDIF.
   ENDMETHOD.                    "output
 
@@ -233,6 +236,7 @@ CLASS lcl_u IMPLEMENTATION.
       EXPORTING
         iv_system_name = lv_system_name
         iv_request     = is_e070-trkorr
+        iv_vers_ignore = vers_ign
       IMPORTING
 *       EV_TP_CMD_STRG =
         ev_tp_ret_code = lv_tp_ret_code
@@ -274,6 +278,7 @@ CLASS lcl_u IMPLEMENTATION.
       EXPORTING
         iv_system_name = lv_system_name
         iv_request     = is_e070-trkorr
+        iv_vers_ignore = vers_ign
       IMPORTING
 *       EV_TP_CMD_STRG =
         ev_tp_ret_code = lv_tp_ret_code
@@ -295,6 +300,7 @@ CLASS lcl_u IMPLEMENTATION.
     zcl_bc009_html=>get_instance( )->add_para_val_ch(
         iv_id    = 'ret_code'
         iv_value = lv_tp_ret_code
+    )->add_tab_ch( it_tab = VALUE tprequests( ( trkorr = is_e070-trkorr ) )
     )->add_tab_ch( it_tab = lt_trreq ).
   ENDMETHOD.                    " tms_in_remote_sys
 
@@ -391,10 +397,10 @@ CLASS lcl_u IMPLEMENTATION.
 
 
     CALL FUNCTION 'CTS_LOCK_TRKORR'        " eclipse compatible locking...
-         EXPORTING
-              iv_trkorr   = iv_req_id
-         EXCEPTIONS
-              OTHERS = 1.
+      EXPORTING
+        iv_trkorr = iv_req_id
+      EXCEPTIONS
+        OTHERS    = 1.
     IF sy-subrc  =    1.
       RETURN.
     ENDIF.
@@ -403,14 +409,14 @@ CLASS lcl_u IMPLEMENTATION.
 
 
     CALL FUNCTION 'Z_BC009_TRREQ_UPD'
-      IN UPDATE TASK .
+      IN UPDATE TASK.
 
 *---call trint_release_request------------------------------------------
     CLEAR lt_messages.
     CALL FUNCTION 'TRINT_RELEASE_REQUEST'
       EXPORTING
         iv_trkorr                   = iv_req_id
-                                                                     "     iv_dialog                   = abap_true
+  "     iv_dialog                   = abap_true
         iv_dialog                   = abap_false
         iv_as_background_job        = lv_as_background_job
         iv_success_message          = lv_success_message

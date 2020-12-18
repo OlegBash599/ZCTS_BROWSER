@@ -4,7 +4,7 @@
   <asx:values>
    <VSEOCLASS>
     <CLSNAME>ZCL_BC009_TARGET_SYSINFO</CLSNAME>
-    <LANGU>R</LANGU>
+    <LANGU>E</LANGU>
     <DESCRIPT>Getting Target System Info</DESCRIPT>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>

@@ -1,9 +1,10 @@
-FUNCTION Z_BC009_TMS_TP_IMPORT.
+FUNCTION z_bc009_tms_tp_import.
 *"----------------------------------------------------------------------
-*"*"Локальный интерфейс:
+*"*"Local Interface:
 *"  IMPORTING
 *"     VALUE(IV_SYSTEM_NAME) TYPE  STPA-SYSNAME
 *"     VALUE(IV_REQUEST) TYPE  STPA-TRKORR
+*"     VALUE(IV_VERS_IGNORE) TYPE  TRPARFLAG DEFAULT 'Y'
 *"  EXPORTING
 *"     VALUE(EV_TP_CMD_STRG) LIKE  STPA-CMDSTRING
 *"     VALUE(EV_TP_RET_CODE) LIKE  STPA-RETCODE
@@ -22,7 +23,16 @@ FUNCTION Z_BC009_TMS_TP_IMPORT.
 *"----------------------------------------------------------------------
   DATA lv_symandt TYPE symandt.
 
+  """"""""""""""""""""""""""""""""""""""""""""'
+  DATA lv_vers_ignore TYPE trparflag VALUE 'Y'.
+  DATA lv_rc152 TYPE trparflag VALUE 'X'.
+  """"""""""""""""""""""""""""""""""""""""""""'
+
   lv_symandt = sy-mandt.
+
+  IF iv_vers_ignore IS SUPPLIED.
+    lv_vers_ignore = iv_vers_ignore.
+  ENDIF.
 
 
   CALL FUNCTION 'TMS_TP_IMPORT'
@@ -35,8 +45,8 @@ FUNCTION Z_BC009_TMS_TP_IMPORT.
 *     IV_UMODES          =
 *     IV_TP_OPTIONS      =
 *     IV_IGN_PREDEC      =
-*     IV_IGN_CVERS       =
-*     IV_IGN_RC152       =
+      iv_ign_cvers       = lv_vers_ignore
+      iv_ign_rc152       = lv_rc152
 *     IV_OFFLINE         =
 *     IV_FEEDBACK        =
 *     IV_PRID_TEXT       =

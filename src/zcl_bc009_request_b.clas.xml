@@ -4,7 +4,7 @@
   <asx:values>
    <VSEOCLASS>
     <CLSNAME>ZCL_BC009_REQUEST_B</CLSNAME>
-    <LANGU>R</LANGU>
+    <LANGU>E</LANGU>
     <DESCRIPT>Base class for request</DESCRIPT>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
