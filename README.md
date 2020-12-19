@@ -42,5 +42,5 @@ ZCTS_BROWSER for Object Transporting
 <h2>Для работы части ZPY </h2>
 <ol type="1">
   <li>Python3 (чем выше, тем лучше) установлен на рабочей машине </li>
-  <li> Библиотека pynwrfc установлена как описано тут  https://sap.github.io/PyRFC/install.html </li>
+  <li> Библиотека pynwrfc установлена как описано тут https://sap.github.io/PyRFC/install.html </li>
 </ol> 
