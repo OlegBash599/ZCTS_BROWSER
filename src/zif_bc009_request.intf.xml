@@ -4,7 +4,7 @@
   <asx:values>
    <VSEOINTERF>
     <CLSNAME>ZIF_BC009_REQUEST</CLSNAME>
-    <LANGU>E</LANGU>
+    <LANGU>R</LANGU>
     <DESCRIPT>Transport Request(Custom)</DESCRIPT>
     <EXPOSURE>2</EXPOSURE>
     <STATE>1</STATE>

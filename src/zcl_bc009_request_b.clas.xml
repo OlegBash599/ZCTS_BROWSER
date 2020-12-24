@@ -4,13 +4,21 @@
   <asx:values>
    <VSEOCLASS>
     <CLSNAME>ZCL_BC009_REQUEST_B</CLSNAME>
-    <LANGU>E</LANGU>
+    <LANGU>R</LANGU>
     <DESCRIPT>Base class for request</DESCRIPT>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>
     <UNICODE>X</UNICODE>
    </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BC009_REQUEST_B</CLSNAME>
+     <CMPNAME>MV_TARGET_SYS</CMPNAME>
+     <LANGU>R</LANGU>
+     <DESCRIPT>Имя SAP-системы</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
   </asx:values>
  </asx:abap>
 </abapGit>

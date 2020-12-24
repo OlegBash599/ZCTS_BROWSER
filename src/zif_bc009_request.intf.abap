@@ -9,4 +9,7 @@ interface ZIF_BC009_REQUEST
       !IV_TRKORR type TRKORR
     raising
       resumable(ZCX_BC009_REQUEST) .
+  methods SET_TARGET
+    importing
+      !IV_TRG_SYS type SYSYSID .
 endinterface.

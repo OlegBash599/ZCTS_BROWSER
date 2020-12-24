@@ -3,26 +3,23 @@
 *----------------------------------------------------------------------*
 *
 *----------------------------------------------------------------------*
-CLASS zcl_bc009_request_b DEFINITION
-  PUBLIC
-  FINAL
-  CREATE PUBLIC .
+class ZCL_BC009_REQUEST_B definition
+  public
+  final
+  create public .
 
-  PUBLIC SECTION.
+public section.
 
-    INTERFACES zif_bc009_request .
+  interfaces ZIF_BC009_REQUEST .
+
+  data MV_TARGET_SYS type SYSYSID .
   PROTECTED SECTION.
   PRIVATE SECTION.
-ENDCLASS.                    "ZCL_BC009_REQUEST_B DEFINITION
+ENDCLASS.
 
 
 
-*----------------------------------------------------------------------*
-*       CLASS ZCL_BC009_REQUEST_B IMPLEMENTATION
-*----------------------------------------------------------------------*
-*
-*----------------------------------------------------------------------*
-CLASS zcl_bc009_request_b IMPLEMENTATION.
+CLASS ZCL_BC009_REQUEST_B IMPLEMENTATION.
 
 
   METHOD zif_bc009_request~move_as_copy.
@@ -54,4 +51,9 @@ CLASS zcl_bc009_request_b IMPLEMENTATION.
     ENDTRY.
 
   ENDMETHOD.                    "zif_bc009_request~move_as_copy
-ENDCLASS.                    "ZCL_BC009_REQUEST_B IMPLEMENTATION
+
+
+method ZIF_BC009_REQUEST~SET_TARGET.
+  MV_TARGET_SYS = iv_trg_sys.
+endmethod.
+ENDCLASS.
