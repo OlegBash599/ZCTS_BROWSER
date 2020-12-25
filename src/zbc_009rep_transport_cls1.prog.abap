@@ -296,11 +296,17 @@ CLASS lcl_u IMPLEMENTATION.
 *       TT_LOGPTR      =
       .
 
+    data lt_reqs TYPE tprequests.
+    data ls_reqs TYPE TPREQUEST.
+
+    ls_reqs-trkorr = is_e070-trkorr.
+    append ls_reqs to lt_reqs.
 
     zcl_bc009_html=>get_instance( )->add_para_val_ch(
         iv_id    = 'ret_code'
         iv_value = lv_tp_ret_code
-    )->add_tab_ch( it_tab = VALUE tprequests( ( trkorr = is_e070-trkorr ) )
+   " )->add_tab_ch( it_tab = VALUE tprequests( ( trkorr = is_e070-trkorr ) )
+    )->add_tab_ch( it_tab = lt_reqs
     )->add_tab_ch( it_tab = lt_trreq ).
   ENDMETHOD.                    " tms_in_remote_sys
 
