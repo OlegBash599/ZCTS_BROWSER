@@ -4,20 +4,27 @@
   <asx:values>
    <DD04V>
     <ROLLNAME>ZEBC009_VERS_IGNORE</ROLLNAME>
-    <DDLANGUAGE>E</DDLANGUAGE>
     <DOMNAME>ZDBC009_VERS_IGNORE</DOMNAME>
     <HEADLEN>55</HEADLEN>
     <SCRLEN1>10</SCRLEN1>
     <SCRLEN2>20</SCRLEN2>
     <SCRLEN3>40</SCRLEN3>
-    <DDTEXT>Параметр Игнрирование версии</DDTEXT>
-    <REPTEXT>Параметр Игнрирование версии</REPTEXT>
-    <SCRTEXT_S>ИгнрВерси</SCRTEXT_S>
-    <SCRTEXT_M>ИгноририровВерсии</SCRTEXT_M>
-    <SCRTEXT_L>Параметр Игнрирование версии</SCRTEXT_L>
     <DTELMASTER>E</DTELMASTER>
     <REFKIND>D</REFKIND>
    </DD04V>
+   <I18N_LANGS>
+    <LANGU>E</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DDTEXT>Параметр Игнрирование версии</DDTEXT>
+     <REPTEXT>Параметр Игнрирование версии</REPTEXT>
+     <SCRTEXT_S>ИгнрВерси</SCRTEXT_S>
+     <SCRTEXT_M>ИгноририровВерсии</SCRTEXT_M>
+     <SCRTEXT_L>Параметр Игнрирование версии</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
   </asx:values>
  </asx:abap>
 </abapGit>
