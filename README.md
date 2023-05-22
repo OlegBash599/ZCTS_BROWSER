@@ -18,7 +18,7 @@ ZCTS_BROWSER for Object Transporting
   <li>No web dynpro</li>
 </ol>  
 
-<h3>What was optimized/improved compared to version1 ( is here: https://github.com/OlegBash599/ZCTS_BROWSER_v1 ): </h3>
+<h4>What was optimized/improved compared to version1 ( is here: https://github.com/OlegBash599/ZCTS_BROWSER_v1 ): </h4>
   <ol type="1">
   <li>No more PyRFC is needed</li>
   <li>No more webDynpro is needed </li>
