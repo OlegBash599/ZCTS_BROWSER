@@ -1,5 +1,6 @@
-# ZCTS_BROWSER: ZCTS002 version
+# ZCTS_BROWSER: NetWeaver Object Transporting
 ZCTS_BROWSER for Object Transporting with TOC (transport of copies)
+Latest version: ZCTS002
 <h2>Characteristics: </h2>
 <ol type="1">
   <li>transport of copies without version generation</li>
