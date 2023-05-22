@@ -7,6 +7,7 @@ Latest version: ZCTS002
   <li>transport of copies for both customizing and workbench requests</li>
   <li>get list of transports via search help</li>
   <li>working via simple report ZREP_CTS002_TRANSCOPY </li>
+  <li>support via email: F1base@olegbash.ru is added. You are welcomed with anything that could be transported via email</li>
 </ol>
 =========================================================== <BR>
 =========================================================== <BR>
@@ -39,6 +40,7 @@ Latest version: ZCTS002
   <li>перенос запросов как для запросов customizing так и для запросов workbench</li>
   <li>получение списка запросов через средство поиска прямо в отчете</li>
   <li>минималистский/легкий дизайн</li>
+  <li>Добавлена функция поддержки через почту F1base@olegbash.ru</li>
 </ol>
 =========================================================== <BR>
 =========================================================== <BR>
