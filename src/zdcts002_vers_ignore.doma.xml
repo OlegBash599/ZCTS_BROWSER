@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DOMA" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD01V>
+    <DOMNAME>ZDCTS002_VERS_IGNORE</DOMNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DATATYPE>CHAR</DATATYPE>
+    <LENG>000001</LENG>
+    <OUTPUTLEN>000001</OUTPUTLEN>
+    <VALEXI>X</VALEXI>
+    <DDTEXT>Ignore Target System Vers Mismatch</DDTEXT>
+   </DD01V>
+   <DD07V_TAB>
+    <DD07V>
+     <VALPOS>0001</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>D</DOMVALUE_L>
+     <DDTEXT>CVERS check is disabled via TMS parameter SP_TRANS_SYNC</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0002</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>N</DOMVALUE_L>
+     <DDTEXT>perform CVERS check and prevent import if requests</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0003</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>Y</DOMVALUE_L>
+     <DDTEXT>ignore invalid CVERS of target system -&gt; perform</DDTEXT>
+    </DD07V>
+   </DD07V_TAB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

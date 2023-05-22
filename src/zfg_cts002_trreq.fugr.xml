@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Transport Request Function Group</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZFG_CTS002_TRREQTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZFG_CTS002_TRREQ</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>Z_CTS002_TMS_TP_IMPORT</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>TMS_TP_IMPORT (with remote)</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_SYSTEM_NAME</PARAMETER>
+       <TYP>STPA-SYSNAME</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_REQUEST</PARAMETER>
+       <TYP>STPA-TRKORR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_VERS_IGNORE</PARAMETER>
+       <DEFAULT>&apos;Y&apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>TRPARFLAG</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_IMPORT_MODE</PARAMETER>
+       <DEFAULT>2</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>INT1</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EV_ERROR</PARAMETER>
+       <TYP>STRING</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_SYSTEM_NAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Name of an SAP System in the (active) transp. configuration</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_REQUEST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Request/Task</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_VERS_IGNORE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Flag ( &apos;X&apos; or &apos; &apos; )</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_IMPORT_MODE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>1 - direct; 2-with check data files</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_ERROR</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_CTS002_TRREQ_EXCL_VERGEN_UPD</FUNCNAME>
+     <UPDATE_TASK>1</UPDATE_TASK>
+     <SHORT_TEXT>Exclude Version Generation</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_AVOID_VER_GEN</PARAMETER>
+       <DEFAULT>ABAP_TRUE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ABAP_BOOL</TYP>
+      </RSIMP>
+     </IMPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_AVOID_VER_GEN</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
