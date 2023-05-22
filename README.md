@@ -1,46 +1,50 @@
-# ZCTS_BROWSER: ABAP / Python / webDynPro 
+# ZCTS_BROWSER: ZCTS002 version
 ZCTS_BROWSER for Object Transporting
 <h2>Characteristics: </h2>
 <ol type="1">
   <li>transport of copies without version generation</li>
   <li>transport of copies for both customizing and workbench requests</li>
-  <li>get list of transports and start import via Python console with pynwrfc</li>
+  <li>get list of transports via search help</li>
+  <li>working via simple report</li>
 </ol>
 =========================================================== <BR>
 =========================================================== <BR>
 <h2>prerequisites: </h2>
 <ol type="1">
-  <li>WebDynpro is supported</li>
-  <li>Function <b>Z_BC009_TMS_TP_IMPORT</b> should be tranposrted into test/target system;  RFC-connection should exist with the system. User which is transporting the request should have authorization  <b>S_TRANSPRT</b> </li>
-  <li>in class <b>ZCL_BC009_TARGET_SYSINFO</b> it is necessary to specify: name and RFC-connection.</li>
-  <li>for initial testing purposes the report exists <b>ZBC_009REP_TRANSPORT_LIGHT</b>. After that web version could be used with no problems</li>
+  <li>Just import package into the source system and target system</li>
+  <li>RFC-connection between source and target systems should be created</li>
+  <li>RFC-connection information should be added into the report **ZREP_CTS002_TRANSCOPY** with help of button _TargetSys (ZTCTS002_DESTSYS)_ which is on the toolbar near launch button</li>
+  <li>You should have authorization to launch report and access to target system</li>
+  <li>No web dynpro</li>
 </ol>  
 
-<h2>prerequisites for ZPY-function </h2>
-<ol type="1">
-  <li>Python is installed</li>
-  <li>pynwrfc is installed. It is described  https://sap.github.io/PyRFC/install.html </li>
+<h3>What was optimized/improved compared to version1 ( is here: https://github.com/OlegBash599/ZCTS_BROWSER_v1 ): </h3>
+  <ol type="1">
+  <li>No more PyRFC is needed</li>
+  <li>No more webDynpro is needed </li>
+  <li>Some old functions (TMS*) was replaced by new functions (TMS_MGR* )</li>
+  <li>Customizing options are added</li>
+  <li>Old unused code is removed</li>
+  <li>Option to **create TOC only** or **create and transport TOC** are on the selection screen for now</li>
+  <li>List of opened transports could be read via search help. No need to go anywhere else for reading.</li>
 </ol> 
+
 
 ==========================RUSSIAN DESCRIPTION=================================
 <h2>Функции: </h2>
 <ol type="1">
-  <li>перенос копий запросов без генерации версии</li>
-  <li>включение транспортных запросов не только инструментальных, но и запросов настройки</li>
-  <li>получение списка транспортов и запуск импорта в тест через Python-console</li>
+  <li>перенос копий запросов без генерации версии: весь функционал через программу **ZREP_CTS002_TRANSCOPY**</li>
+  <li>перенос запросов как для запросов customizing так и для запросов workbench</li>
+  <li>получение списка запросов через средство поиска прямо в отчете</li>
+  <li>минималистский/легкий дизайн</li>
 </ol>
 =========================================================== <BR>
 =========================================================== <BR>
 <h2>Требования и предпосылки: </h2>
 <ol type="1">
-  <li>Компоненты WebDynPro должны поддерживаться системой</li>
-  <li>Функциональный модуль <b>Z_BC009_TMS_TP_IMPORT</b> должен быть донесен до теста (или до системы, в которую нужно переносить транспортный запрос); также должно быть создано RFC-соединение с этой системой. У пользователя, под которым делается перенос должен быть объект полномочий  <b>S_TRANSPRT</b> </li>
-  <li>в классе <b>ZCL_BC009_TARGET_SYSINFO</b> нужно прописать настройки целевой системы: имя и RFC-соединение.</li>
-  <li>первые запуски делать на программе <b>ZBC_009REP_TRANSPORT_LIGHT</b> - если при прогоне этой программы запросы-копии создаются и переносятся до целевой системы, то можно считать, что настройка произведена успешно. если нет - то необходимо успешно настроить все и только потом переходить к использованию web-версии.</li>
+  <li>Между исходной и целевой системой должно быть настроено RFC-соединение</li>
+  <li>RFC соединение должно быть добавлено в таблицу ZTCTS002_DESTSYS: доступно в программе **ZREP_CTS002_TRANSCOPY** с помощью кнопки _TargetSys (ZTCTS002_DESTSYS)_</li>
+  <li>У пользователя должны быть полномочия на перенос запрос из исходной системы; а в целевой системе должны быть полномочия на импорт (у того пользователя, под которым открывается RFC-соединение)</li>
+  <li>Web Dynpro-доступность удалена для легковестности активации и переноса между системами</li>
 </ol>  
 
-<h2>Для работы части ZPY </h2>
-<ol type="1">
-  <li>Python3 (чем выше, тем лучше) установлен на рабочей машине </li>
-  <li> Библиотека pynwrfc установлена как описано тут https://sap.github.io/PyRFC/install.html </li>
-</ol> 
