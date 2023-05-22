@@ -9,7 +9,7 @@ ZCTS_BROWSER for Object Transporting
 </ol>
 =========================================================== <BR>
 =========================================================== <BR>
-<h2>prerequisites: </h2>
+<h2>Prerequisites: </h2>
 <ol type="1">
   <li>Just import package into the source system and target system</li>
   <li>RFC-connection between source and target systems should be created</li>
@@ -48,3 +48,16 @@ ZCTS_BROWSER for Object Transporting
   <li>У пользователя должны быть полномочия на перенос запрос из исходной системы; а в целевой системе должны быть полномочия на импорт (у того пользователя, под которым открывается RFC-соединение)</li>
   <li>Web Dynpro-доступность удалена для легковестности активации и переноса между системами</li>
 </ol>  
+
+
+<h4>Что улучшено по сравнению с версией1 (ZBC009) ( is here: https://github.com/OlegBash599/ZCTS_BROWSER_v1 ): </h4>
+  <ol type="1">
+  <li>Модуль PyRFC больше не требуется; работа через отчет **ZREP_CTS002_TRANSCOPY** </li>
+  <li>No more webDynpro is needed </li>
+  <li>Some old functions (TMS*) was replaced by new functions (TMS_MGR* )</li>
+  <li>Customizing options are added</li>
+  <li>Old unused code is removed</li>
+  <li>Option to **create TOC only** or **create and transport TOC** are on the selection screen for now</li>
+  <li>List of opened transports could be read via search help. No need to go anywhere else for reading.</li>
+</ol> 
+  
