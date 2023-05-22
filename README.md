@@ -6,7 +6,7 @@ Latest version: ZCTS002
   <li>transport of copies without version generation</li>
   <li>transport of copies for both customizing and workbench requests</li>
   <li>get list of transports via search help</li>
-  <li>working via simple report</li>
+  <li>working via simple report ZREP_CTS002_TRANSCOPY </li>
 </ol>
 =========================================================== <BR>
 =========================================================== <BR>
