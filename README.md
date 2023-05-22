@@ -17,6 +17,7 @@ Latest version: ZCTS002
   <li>RFC-connection information should be added into the report **ZREP_CTS002_TRANSCOPY** with help of button _TargetSys (ZTCTS002_DESTSYS)_ which is on the toolbar near launch button</li>
   <li>You should have authorization to launch report and access to target system</li>
   <li>No web dynpro</li>
+  <li>Launch ZREP_CTS002_TRANSCOPY, do TOC, and enjoy yourself with saving time :-)</li>
 </ol>  
 
 <h4>What was optimized/improved compared to version1 ( is here: https://github.com/OlegBash599/ZCTS_BROWSER_v1 ): </h4>
@@ -48,6 +49,7 @@ Latest version: ZCTS002
   <li>В исходной системе RFC-соединение должно быть добавлено в таблицу ZTCTS002_DESTSYS: доступно в программе **ZREP_CTS002_TRANSCOPY** с помощью кнопки _TargetSys (ZTCTS002_DESTSYS)_</li>
   <li>У пользователя должны быть полномочия на перенос запрос из исходной системы; а в целевой системе должны быть полномочия на импорт (у того пользователя, под которым открывается RFC-соединение)</li>
   <li>Web Dynpro-доступность удалена для легковестности активации и переноса между системами</li>
+  <li>Запустите отчет ZREP_CTS002_TRANSCOPY, перенести TOC в один клик, и будьте довольны и счастливы :-)</li>
 </ol>  
 
 
