@@ -1,5 +1,5 @@
 # ZCTS_BROWSER: ZCTS002 version
-ZCTS_BROWSER for Object Transporting
+ZCTS_BROWSER for Object Transporting with TOC (transport of copies)
 <h2>Characteristics: </h2>
 <ol type="1">
   <li>transport of copies without version generation</li>
@@ -53,11 +53,11 @@ ZCTS_BROWSER for Object Transporting
 <h4>Что улучшено по сравнению с версией1 (ZBC009) ( is here: https://github.com/OlegBash599/ZCTS_BROWSER_v1 ): </h4>
   <ol type="1">
   <li>Модуль PyRFC больше не требуется; работа через отчет **ZREP_CTS002_TRANSCOPY** </li>
-  <li>No more webDynpro is needed </li>
-  <li>Some old functions (TMS*) was replaced by new functions (TMS_MGR* )</li>
-  <li>Customizing options are added</li>
-  <li>Old unused code is removed</li>
-  <li>Option to **create TOC only** or **create and transport TOC** are on the selection screen for now</li>
-  <li>List of opened transports could be read via search help. No need to go anywhere else for reading.</li>
+  <li>Функциональность webDynpro исключена</li>
+  <li>Старые ФМы (TMS*) были заменены на новые ФМы (TMS_MGR* ) (именно так сделал стандарт в своем функционале, поэтому пришлось соответствовать; в старых ФМах проблем не было)</li>
+  <li>Добавлена возможность кастомизации</li>
+  <li>Неиспользуемый код/комментарии были удалены</li>
+  <li>Опция **либо создать только TOC** or **либо создать TOC и импортировать в целевую систему** добавлена на селекционный экран</li>
+  <li>Список открытых транспортных запросов можно получить через средство поиска. Для проверки номера запроса с описанием не нужно ходить в другие транзакции.</li>
 </ol> 
   
