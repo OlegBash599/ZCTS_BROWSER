@@ -39,13 +39,28 @@ ENDCLASS.
 
 
 
-CLASS zcl_cts002_tr_imp_dtfile IMPLEMENTATION.
+CLASS ZCL_CTS002_TR_IMP_DTFILE IMPLEMENTATION.
+
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Public Method ZCL_CTS002_TR_IMP_DTFILE->CONSTRUCTOR
+* +-------------------------------------------------------------------------------------------------+
+* | [--->] IV_SYSTEM_NAME                 TYPE        STPA-SYSNAME
+* | [--->] IV_REQUEST                     TYPE        STPA-TRKORR
+* | [--->] IV_VERS_IGNORE                 TYPE        TRPARFLAG (default ='Y')
+* +--------------------------------------------------------------------------------------</SIGNATURE>
   METHOD constructor.
     mv_system_name = iv_system_name.
     mv_request = iv_request.
     mv_vers_ignore = iv_vers_ignore.
   ENDMETHOD.
 
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Public Method ZCL_CTS002_TR_IMP_DTFILE->SH
+* +-------------------------------------------------------------------------------------------------+
+* | [!CX!] ZCX_CTS002_DATA_ERROR
+* +--------------------------------------------------------------------------------------</SIGNATURE>
   METHOD sh.
 
     check_n_import_data_file( ).
@@ -54,6 +69,12 @@ CLASS zcl_cts002_tr_imp_dtfile IMPLEMENTATION.
 
   ENDMETHOD.
 
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Private Method ZCL_CTS002_TR_IMP_DTFILE->CHECK_N_IMPORT_DATA_FILE
+* +-------------------------------------------------------------------------------------------------+
+* | [!CX!] ZCX_CTS002_DATA_ERROR
+* +--------------------------------------------------------------------------------------</SIGNATURE>
   METHOD check_n_import_data_file.
     DATA lt_tmsbuffer TYPE tmsbuffers.
     FIELD-SYMBOLS <fs_tmsbuffer> TYPE tmsbuffer.
@@ -66,6 +87,12 @@ CLASS zcl_cts002_tr_imp_dtfile IMPLEMENTATION.
 
   ENDMETHOD.
 
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Private Method ZCL_CTS002_TR_IMP_DTFILE->READ_TMS_BUFFER
+* +-------------------------------------------------------------------------------------------------+
+* | [<---] ET_TMSBUFF                     TYPE        TMSBUFFERS
+* +--------------------------------------------------------------------------------------</SIGNATURE>
   METHOD read_tms_buffer.
 
     SELECT
@@ -78,6 +105,12 @@ CLASS zcl_cts002_tr_imp_dtfile IMPLEMENTATION.
 
   ENDMETHOD.
 
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Private Method ZCL_CTS002_TR_IMP_DTFILE->READ_TRANS_QUEUE
+* +-------------------------------------------------------------------------------------------------+
+* | [!CX!] ZCX_CTS002_DATA_ERROR
+* +--------------------------------------------------------------------------------------</SIGNATURE>
   METHOD read_trans_queue.
     DATA lv_err TYPE string.
 
@@ -136,6 +169,12 @@ CLASS zcl_cts002_tr_imp_dtfile IMPLEMENTATION.
 
   ENDMETHOD.
 
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Private Method ZCL_CTS002_TR_IMP_DTFILE->READ_WITH_NO_DATA_FILES
+* +-------------------------------------------------------------------------------------------------+
+* | [<---] ET_TMSBUFF                     TYPE        TMSBUFFERS
+* +--------------------------------------------------------------------------------------</SIGNATURE>
   METHOD read_with_no_data_files.
     DATA lt_tmsbuffer TYPE tmsbuffers.
 
@@ -147,6 +186,13 @@ CLASS zcl_cts002_tr_imp_dtfile IMPLEMENTATION.
 
   ENDMETHOD.
 
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Private Method ZCL_CTS002_TR_IMP_DTFILE->IMPORT_DATA_FILES
+* +-------------------------------------------------------------------------------------------------+
+* | [--->] IT_TMSBUFF                     TYPE        TMSBUFFERS
+* | [!CX!] ZCX_CTS002_DATA_ERROR
+* +--------------------------------------------------------------------------------------</SIGNATURE>
   METHOD import_data_files.
     DATA lv_err TYPE string.
     DATA ls_tmsbuffer TYPE tmsbuffer.
@@ -201,6 +247,12 @@ CLASS zcl_cts002_tr_imp_dtfile IMPLEMENTATION.
 
   ENDMETHOD.
 
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Private Method ZCL_CTS002_TR_IMP_DTFILE->IMPORT_TR
+* +-------------------------------------------------------------------------------------------------+
+* | [!CX!] ZCX_CTS002_DATA_ERROR
+* +--------------------------------------------------------------------------------------</SIGNATURE>
   METHOD import_tr.
 
     DATA lv_error TYPE string.
@@ -218,7 +270,7 @@ CLASS zcl_cts002_tr_imp_dtfile IMPLEMENTATION.
         iv_system                  = lv_sys_name
 *       iv_domain                  =
         iv_request                 = mv_request
-*       iv_client                  =
+        iv_client                  = sy-mandt
 *       iv_ctc_active              =
 *       iv_overtake                =
 *       iv_import_again            =
@@ -300,5 +352,4 @@ CLASS zcl_cts002_tr_imp_dtfile IMPLEMENTATION.
 *    ENDIF.
 
   ENDMETHOD.
-
 ENDCLASS.
