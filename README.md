@@ -1,5 +1,6 @@
 # ZCTS_BROWSER: NetWeaver Object Transporting
-<img src="https://github.com/OlegBash599/AnyTabUpdateTask/blob/main/version_label.svg"/>
+<img src="https://github.com/OlegBash599/ZCTS_BROWSER/blob/master/version_label.svg"/>
+
 ZCTS_BROWSER for Object Transporting with TOC (transport of copies)
 Latest version: ZCTS002
 <h2>Characteristics: </h2>
