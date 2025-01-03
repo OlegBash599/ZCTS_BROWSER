@@ -72,4 +72,5 @@ Latest version: ZCTS002
  Support via email: F1base@olegbash.ru
   
 ### ToDoList
+- [ ] Description of External Version Control
 - [ ] Integration With External Version Control System
