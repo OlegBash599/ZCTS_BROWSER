@@ -35,7 +35,7 @@ Latest version: ZCTS002
 </ol> 
 
 
-### idea from Sandra Rossi is implementing inspired by this post ( [https://community.sap.com/t5/technology-q-a/sap-fiori-elements-funktion-import-copy-row/qaq-p/14240202](https://community.sap.com/t5/abap-blog-posts/abap-code-to-transport-many-packages-in-one-transport-request/bc-p/14248036) ).
+### idea from Sandra Rossi is implementing inspired by this post ( [ABAP code to transport many packages in one transport request](https://community.sap.com/t5/abap-blog-posts/abap-code-to-transport-many-packages-in-one-transport-request/bc-p/14248036) ).
 
 
 ==========================RUSSIAN DESCRIPTION=================================
